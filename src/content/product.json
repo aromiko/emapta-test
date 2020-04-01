@@ -1,0 +1,12 @@
+[
+  {
+    "value": "standard",
+    "label": "Standard Edition",
+    "price": "$120"
+  },
+  {
+    "value": "enterprise",
+    "label": "Enterprise Edition",
+    "price": "$999"
+  }
+]
