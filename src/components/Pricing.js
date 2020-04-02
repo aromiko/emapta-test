@@ -13,10 +13,16 @@ const Pricing = props => {
   const classes = useStyles();
   return (
     <Fragment>
-      <FormLabel component="legend" className={classes.formLabel}>
+      <FormLabel
+        component="legend"
+        className={classes.formLabel}
+        data-testid="price-label"
+      >
         Total Price
       </FormLabel>
-      <strong>{props.price} per month</strong>
+      <div data-testid="price-per-month">
+        <strong>{props.price} per month</strong>
+      </div>
     </Fragment>
   );
 };

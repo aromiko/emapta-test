@@ -5,8 +5,14 @@ import React from "react";
 const SelectProductTier = props => {
   return (
     <FormControlLabel
+      name={props.value}
       value={props.value}
-      control={<Radio />}
+      control={
+        <Radio
+          inputProps={{ "data-testid": props.value + "-radio-btn" }}
+          checked={props.checked}
+        />
+      }
       label={props.label}
     />
   );

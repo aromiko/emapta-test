@@ -38,10 +38,14 @@ const Home = () => {
 
   return (
     <Container maxWidth="xs">
-      <Card className={classes.card}>
+      <Card className={classes.card} data-testid="product-form">
         <CardContent>
           <FormControl component="fieldset">
-            <FormLabel component="legend" className={classes.formLabel}>
+            <FormLabel
+              component="legend"
+              className={classes.formLabel}
+              data-testid="product-label"
+            >
               Product Edition
             </FormLabel>
             <RadioGroup
@@ -57,6 +61,7 @@ const Home = () => {
                     key={index}
                     value={product.value}
                     label={product.label}
+                    checked={product.value === productTier}
                   />
                 );
               })}
